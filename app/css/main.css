@@ -1,0 +1,74 @@
+/* ==================================================
+   Fonts
+================================================== */
+@font-face {
+    font-family: 'Geometr'; /*a name to be used later*/
+    src: url('/fonts/geometr_n.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'MicrosoftYi'; /*a name to be used later*/
+    src: url('/fonts/microsoft_yi.ttf'); /*URL to font*/
+}
+
+/* ==================================================
+   Basic Styles
+================================================== */
+*{
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+}
+
+/* ==================================================
+   Home
+================================================== */
+#home {
+  background-image: url('/img/background1.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*background-color: #008300;*/
+}
+
+#home .layer{
+  background-color: rgba(255,255,255,0.3);
+}
+
+#home .logo-container {
+  padding: 150px 50px 100px;
+  text-align: center;
+
+}
+
+#home .logo {
+  border-radius: 50%;
+  background-color: rgba(255,255,255,1);
+  display: inline-block;
+  padding: 40px;
+}
+
+#home .logo h1{
+  font-size: 1.6em;
+  font-family: 'Geometr';
+  letter-spacing: 1px;
+  color: #706F6F;
+  margin: 0.5em 0;
+}
+
+#home .logo h1 .slogan{
+  font-family: 'MicrosoftYi';
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#home .logo img {
+  margin: auto;
+  width: 250px;
+}
