@@ -60,4 +60,10 @@ jQuery(document).ready(function($){
     if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
   });
 
+  $(".testimonials-slider").nerveSlider({
+    sliderHeight: 300,
+    slideTransitionSpeed: 1800,
+    slideTransitionEasing: "easeInOutExpo"
+  });
+
 });
