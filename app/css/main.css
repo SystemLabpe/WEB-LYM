@@ -421,3 +421,58 @@ a, a:hover, a:focus {
 #services, #about-us, #testimonials, #values, #contact {
   height: 700px;
 }
+
+#services h2, #about-us h2, #testimonials h2, #values h2, #contact h2 {
+  text-align: center;
+  margin: 80px 0 50px 0;
+}
+
+
+/* ==================================================
+   Services
+================================================== */
+#services article {
+  min-height: 250px;
+  margin-bottom: 50px;
+}
+
+#services article img {
+  height: 150px;
+  margin: 0 auto;
+}
+
+#services article h3 {
+  text-align: center;
+  height: 50px;
+}
+
+/* ==================================================
+   About us
+================================================== */
+
+/* ==================================================
+   testimonials
+================================================== */
+
+/* ==================================================
+   values
+================================================== */
+
+#values article {
+  min-height: 200px;
+  margin-bottom: 50px;
+}
+
+#values article img {
+  height: 75px;
+}
+
+
+#values article h3 {
+  text-align: center;
+}
+
+
+#values article ul {
+  list-style: disc;
+}
