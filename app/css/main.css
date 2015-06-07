@@ -24,7 +24,12 @@
 }
 
 ul {
+  margin: 0;
   list-style: none;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
 }
 
 /* ==================================================
@@ -151,7 +156,7 @@ ul {
   right: 5%;
   bottom: 20px;
   border-radius: 0.25em;
-  background: rgba(3, 13, 24, 0.96);
+  background: rgba(247, 145, 0, 0.96);
   visibility: hidden;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -186,8 +191,8 @@ ul {
 .lym-nav li a {
   display: block;
   padding: 1.6em;
-  border-bottom: 1px solid #092645;
-  color: #f0eee1;
+  border-bottom: 1px solid #4c4c4c;
+  color: #fff;
 }
 .lym-nav li:last-child a {
   border-bottom: none;
@@ -260,12 +265,8 @@ ul {
     -moz-transition: opacity 0.2s;
     transition: opacity 0.2s;
   }
-  .lym-nav li a:hover, .lym-nav li a.active{
-    background-color: #706F6F;
-    border-radius: 4px;
-  }
-  .lym-nav li a:hover b, .lym-nav li a.active b {
-    color: #f0eee1;
+  .lym-nav li a:hover b {
+    color: #4c4c4c;
   }
   .lym-nav li:nth-child(1) a span {
     background-position: 0 0;
@@ -303,6 +304,13 @@ ul {
   .lym-nav.animate-children li a {
     padding: 17px 30px 0 30px;
   }
+  .lym-nav li a.active{
+    background-color: #706F6F;
+    border-radius: 4px;
+  }
+  .lym-nav.animate-children li a.active b {
+    color: #fff;
+  }
   .lym-nav.animate-children li a span {
     opacity: 0;
   }
@@ -314,7 +322,7 @@ ul {
   right: 5%;
   width: 44px;
   height: 44px;
-  background: rgba(3, 13, 24, 0.96);
+  background: rgba(247, 145, 0, 0.96);
   border-radius: 0.25em;
   /* image replacement */
   overflow: hidden;
@@ -406,6 +414,10 @@ ul {
 /* ==================================================
     Sections
 ================================================== */
+.myl-section {
+  padding: 4em 0;
+}
+
 #services, #about-us, #testimonials, #values, #contact {
   height: 700px;
 }
