@@ -15,6 +15,7 @@
   <!-- endbower -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/nerveSlider.css">
   <link rel="stylesheet" href="/css/responsive.css">
   <!-- endinject -->
 </head>
@@ -117,12 +118,52 @@
   </section>
   <section id="about-us" class="myl-section">
     <div class="container">
-      <h2>Conócenos</h2>
+      <h2>Nosotros</h2>
+      <div class="row">
+        <div class="col-md-6 au-slogan">
+          <p>Estrategia y soluciones a tu servicio.</p>
+        </div>
+        <div class="col-md-6 au-description">
+          <p>Somos una empresa enfocada a ofrecer soluciones integrales para la administración de su inmueble con el objetivo de brindar confort y vivir a gusto.</p>
+        </div>
+      </div>
     </div>
   </section>
   <section id="testimonials" class="myl-section">
     <div class="container">
       <h2>Testimonios</h2>
+      <div class="testimonials-slider">
+          <div>
+            <div class="ns_slideContent">
+              <article>
+                <div class="row col-md-12 testimonial-text">
+                  <h3>Edificio Alfa</h3>
+                  <p>“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
+                </div>
+                <div class="row col-md-12 testimonial-author">
+                  <img src="img/man.jpg" alt="">
+                  <p><strong>Nombre Apellido&nbsp;</strong></p>
+                  <p>Vecino</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div>
+            <div class="ns_slideContent">
+              <article>
+                <div class="row col-md-12 testimonial-text">
+                  <h3>Edificio Beta</h3>
+                  <p>“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
+                </div>
+                <div class="row col-md-12 testimonial-author">
+                  <img src="img/man.jpg" alt="">
+                  <p><strong>Nombre Apellido 2&nbsp;</strong></p>
+                  <p>Vecino 2</p>
+                </div>
+              </article>
+            </div>
+          </div>
+      </div>
     </div>
   </section>
   <section id="values" class="myl-section">
@@ -199,8 +240,10 @@
   <!-- bower:js -->
   <script src="lib/jquery/dist/jquery.js"></script>
   <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="lib/jquery-ui/jquery-ui.js"></script>
   <!-- endbower -->
   <!-- inject:js -->
+  <script src="/js/jquery.nerveSlider.js"></script>
   <script src="/js/main.js"></script>
   <!-- endinject -->
 </body>

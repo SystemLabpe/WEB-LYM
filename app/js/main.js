@@ -1,6 +1,7 @@
+"use strict";
 jQuery(document).ready(function($){
   var secondaryNav = $('.lym-nav'),
-  secondaryNavTopPosition = secondaryNav.offset().top;
+  secondaryNavTopPosition = secondaryNav.offset().top,
   contentSections = $('.myl-section');
 
   $(window).on('scroll', function(){
@@ -50,23 +51,28 @@ jQuery(document).ready(function($){
       'scrollTop': target.offset().top - secondaryNav.height() + 1
     }, 400
     );
-        //on mobile - close secondary navigation
-        $('.lym-nav-trigger').removeClass('menu-is-open');
-        secondaryNav.find('ul').removeClass('is-visible');
-      });
+    //on mobile - close secondary navigation
+    $('.lym-nav-trigger').removeClass('menu-is-open');
+    secondaryNav.find('ul').removeClass('is-visible');
+  });
 
   $('#logo-header').find('a').on('click', function(event){
    event.preventDefault();
    var target= $(this.hash);
    $('body,html').animate({
     'scrollTop': target.offset().top - secondaryNav.height() + 1
-  }, 400
-  );
- });
-
-    //on mobile - open/close primary navigation clicking/tapping the menu icon
-    $('.cd-primary-nav').on('click', function(event){
-      if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
-    });
-
+   },400);
   });
+
+  //on mobile - open/close primary navigation clicking/tapping the menu icon
+  $('.cd-primary-nav').on('click', function(event){
+    if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
+  });
+
+  $(".testimonials-slider").nerveSlider({
+    sliderHeight: 300,
+    slideTransitionSpeed: 1800,
+    slideTransitionEasing: "easeInOutExpo"
+  });
+
+});

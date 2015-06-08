@@ -453,6 +453,31 @@ a, a:hover, a:focus {
 /* ==================================================
    testimonials
 ================================================== */
+#testimonials .testimonials-slider {
+  background-color: #DCDDDE;
+}
+
+#testimonials article .testimonial-text{
+  min-height: 180px;
+}
+
+#testimonials article .testimonial-text p{
+  font-style: oblique;
+  text-align: justify;
+}
+
+#testimonials article .testimonial-author{
+  min-height: 180px;
+}
+
+#testimonials article .testimonial-author img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+#testimonials article .testimonial-author p {
+  margin-left: 70px;
+}
 
 /* ==================================================
    values
@@ -467,11 +492,9 @@ a, a:hover, a:focus {
   height: 75px;
 }
 
-
 #values article h3 {
   text-align: center;
 }
-
 
 #values article ul {
   list-style: disc;
