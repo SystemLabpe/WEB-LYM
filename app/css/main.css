@@ -3,17 +3,17 @@
 ================================================== */
 @font-face {
     font-family: 'GeometrN'; /*a name to be used later*/
-    src: url('/fonts/geometr_n.ttf'); /*URL to font*/
+    src: url('../fonts/geometr_n.ttf'); /*URL to font*/
 }
 
 @font-face {
     font-family: 'Geometr'; /*a name to be used later*/
-    src: url('/fonts/geometr.ttf'); /*URL to font*/
+    src: url('../fonts/geometr.ttf'); /*URL to font*/
 }
 
 @font-face {
     font-family: 'MicrosoftYi'; /*a name to be used later*/
-    src: url('/fonts/microsoft_yi.ttf'); /*URL to font*/
+    src: url('../fonts/microsoft_yi.ttf'); /*URL to font*/
 }
 
 /* ==================================================
@@ -161,7 +161,7 @@ p {
   }
 }
 #home {
-  background-image: url('/img/background1.jpg');
+  background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -522,7 +522,7 @@ p {
 ================================================== */
 #about-us {
   min-height: 500px;
-  background: url('/img/logo-transparent.png');
+  background: url('../img/logo-transparent.png');
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: initial;

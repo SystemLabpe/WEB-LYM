@@ -6,6 +6,10 @@ jshint = require('gulp-jshint'),
 stylish = require('jshint-stylish'),
 inject = require('gulp-inject'),
 wiredep = require('wiredep').stream,
+gulpif = require('gulp-if'),
+minifyCss = require('gulp-minify-css'),
+useref = require('gulp-useref'),
+uglify = require('gulp-uglify'),
 historyApiFallback = require('connect-history-api-fallback');
 
 // Servidor web de desarrollo
@@ -17,6 +21,19 @@ gulp.task('server', function() {
     livereload: true,
     middleware: function(connect, opt) {
       return [ historyApiFallback ];
+    }
+  });
+});
+
+// Servidor web para probar el entorno de producción
+gulp.task('server-dist', function() {
+  connect.server({
+    root: './dist',
+    hostname: '0.0.0.0',
+    port: 8080,
+    livereload: true,
+    middleware: function(connect, opt) {
+    return [ historyApiFallback ];
     }
   });
 });
@@ -63,6 +80,34 @@ gulp.task('wiredep', function () {
   .pipe(gulp.dest('./app'));
 });
 
+// Comprime los archivos CSS y JS enlazados en el index.html
+// y los minifica.
+gulp.task('compress', function() {
+  gulp.src('./app/index.html')
+  .pipe(useref.assets())
+  .pipe(gulpif('*.js', uglify({mangle: false })))
+  .pipe(gulpif('*.css', minifyCss()))
+  .pipe(gulp.dest('./dist'));
+});
+
+// Copia el contenido de los estáticos e index.html al directorio
+// de producción sin tags de comentarios
+gulp.task('copy', function() {
+  gulp.src('./app/index.html')
+  .pipe(useref())
+  .pipe(gulp.dest('./dist'));
+  gulp.src('./app/css/icons/**')
+  .pipe(gulp.dest('./dist/css/icons'));
+  gulp.src('./app/fonts/**')
+  .pipe(gulp.dest('./dist/fonts'));
+  gulp.src('./app/lib/font-awesome/fonts/**')
+  .pipe(gulp.dest('./dist/fonts'));
+  gulp.src('./app/img/**')
+  .pipe(gulp.dest('./dist/img'));
+  gulp.src('./app/php/**')
+  .pipe(gulp.dest('./dist/php'));
+});
+
 // Vigila cambios que se produzcan en el código
 // y lanza las tareas relacionadas
 gulp.task('watch', function() {
@@ -73,3 +118,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['server', 'inject', 'wiredep', 'watch']);
+gulp.task('build', ['compress', 'copy']);
