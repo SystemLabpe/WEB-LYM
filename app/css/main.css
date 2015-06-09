@@ -541,8 +541,12 @@ p {
 /* ==================================================
    testimonials
 ================================================== */
-#testimonials .testimonials-slider {
-  background-color: #DCDDDE;
+#testimonials {
+  background-color: #706F6F;
+}
+
+#testimonials h2 {
+  color: #DCDDDE;
 }
 
 #testimonials .ns_slideContent {
@@ -556,6 +560,7 @@ p {
 #testimonials article .testimonial-text p{
   font-style: oblique;
   text-align: justify;
+  color: #DCDDDE;
 }
 
 #testimonials article .testimonial-author img {
@@ -565,6 +570,7 @@ p {
 
 #testimonials article .testimonial-author p {
   margin-left: 70px;
+  color: #474747;
 }
 
 /* ==================================================
@@ -601,7 +607,11 @@ p {
    Contact
 ================================================== */
 #contact {
-  background-color: #4BAF4F;
+  background-color: #706F6F;
+  color: #fff;
+}
+
+#contact h2 {
   color: #fff;
 }
 
@@ -618,8 +628,12 @@ p {
 }
 
 #contact .contact-form button {
-  border-color: #fff;
-  border-width: 2px;
+  border-color: #474747;
+  border-width: 1px;
+}
+
+#contact .contact-form button:hover {
+  background-color: #F7A93B;
 }
 
 .contact-info .contact-icon {
