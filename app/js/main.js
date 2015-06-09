@@ -64,6 +64,13 @@ jQuery(document).ready(function($){
    },400);
   });
 
+  $('#logo-home').on('click',function(){
+    var target = $('#contact');
+    $('body,html').animate({
+      'scrollTop': target.offset().top - secondaryNav.height() + 1
+    },400);
+  });
+
   //on mobile - open/close primary navigation clicking/tapping the menu icon
   $('.cd-primary-nav').on('click', function(event){
     if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');

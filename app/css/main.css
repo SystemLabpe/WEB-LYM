@@ -2,8 +2,13 @@
    Fonts
 ================================================== */
 @font-face {
-    font-family: 'Geometr'; /*a name to be used later*/
+    font-family: 'GeometrN'; /*a name to be used later*/
     src: url('/fonts/geometr_n.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Geometr'; /*a name to be used later*/
+    src: url('/fonts/geometr.ttf'); /*URL to font*/
 }
 
 @font-face {
@@ -23,6 +28,10 @@
   border: 0;
 }
 
+body {
+  font-family: "Open Sans",Arial,Helvetica Neue,sans-serif;
+}
+
 ul {
   margin: 0;
   list-style: none;
@@ -30,6 +39,37 @@ ul {
 
 a, a:hover, a:focus {
   text-decoration: none;
+}
+
+.btn-lym {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.btn-orange {
+  background-color: #F79100;
+}
+
+.btn-orange:hover {
+  color: #fff;
+}
+
+h2 {
+  font-family: 'GeometrN';
+}
+
+h3 {
+  font-family: 'Geometr';
+  font-size: 22px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
 }
 
 /* ==================================================
@@ -58,7 +98,7 @@ a, a:hover, a:focus {
 
 #logo-header img {
   display: block;
-  width: 60px;
+  height: 50px;
 }
 
 #logo-header{
@@ -116,13 +156,14 @@ a, a:hover, a:focus {
 #home .logo {
   border-radius: 50%;
   background-color: rgba(255,255,255,1);
+  cursor: pointer;
   display: inline-block;
   padding: 58px 74px;
 }
 
 #home .logo h1{
   font-size: 1.6em;
-  font-family: 'Geometr';
+  font-family: 'GeometrN';
   letter-spacing: 1px;
   color: #706F6F;
   margin: 0.5em 0;
@@ -418,10 +459,6 @@ a, a:hover, a:focus {
   padding: 4em 0;
 }
 
-#contact {
-  height: 700px;
-}
-
 #services h2, #about-us h2, #testimonials h2, #values h2, #contact h2 {
   text-align: center;
   margin: 80px 0 50px 0;
@@ -509,6 +546,10 @@ a, a:hover, a:focus {
 
 #contact .contact-form, #contact .contact-footer {
   padding: 50px 0;
+}
+
+#contact .contact-form textarea{
+  height: 132px;
 }
 
 .contact-footer .contact-icon {
