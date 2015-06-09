@@ -455,9 +455,12 @@ p {
 /* ==================================================
     Sections
 ================================================== */
-.myl-section {
-  padding: 4em 0;
+.myl-section h2{
+  padding: 1em 0;
+  text-align: center;
+  font-weight: bold;
 }
+
 
 #services h2, #about-us h2, #testimonials h2, #values h2, #contact h2 {
   text-align: center;
@@ -480,7 +483,14 @@ p {
 
 #services article h3 {
   text-align: center;
-  height: 50px;
+  font-weight: bold;
+  min-height: 50px;
+}
+
+#services article p {
+  text-align: center;
+  margin-top: 25px;
+  padding: 0 10px 0 10px;
 }
 
 /* ==================================================
@@ -494,6 +504,10 @@ p {
   background-color: #DCDDDE;
 }
 
+#testimonials .ns_slideContent {
+  padding: 50px;
+}
+
 #testimonials article .testimonial-text{
   min-height: 180px;
 }
@@ -501,10 +515,6 @@ p {
 #testimonials article .testimonial-text p{
   font-style: oblique;
   text-align: justify;
-}
-
-#testimonials article .testimonial-author{
-  min-height: 180px;
 }
 
 #testimonials article .testimonial-author img {
@@ -533,8 +543,24 @@ p {
   text-align: center;
 }
 
-#values article ul {
-  list-style: disc;
+.green {
+  color: #019587;
+}
+
+.blue {
+  color: #02A8F4;
+}
+
+.orange {
+  color: #FF5521;
+}
+
+.brown {
+  color: #795549;
+}
+
+#values article ul li span {
+  margin-left: 8px;
 }
 
 /* ==================================================

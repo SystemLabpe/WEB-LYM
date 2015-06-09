@@ -77,7 +77,8 @@ jQuery(document).ready(function($){
   });
 
   $(".testimonials-slider").nerveSlider({
-    sliderHeight: 300,
+    sliderHeightAdaptable: true,
+    sliderResizable: true,
     slideTransitionSpeed: 1800,
     slideTransitionEasing: "easeInOutExpo"
   });
