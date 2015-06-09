@@ -30,6 +30,7 @@
 
 body {
   font-family: "Open Sans",Arial,Helvetica Neue,sans-serif;
+  color: #706F6F;
 }
 
 ul {
@@ -66,10 +67,36 @@ h3 {
   font-family: 'Geometr';
   font-size: 22px;
   font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+h2, h3 {
+  color: #474747;
+  margin: 0;
 }
 
 p {
   font-size: 16px;
+}
+
+/* ==================================================
+   Colors
+================================================== */
+.green {
+  color: #019587;
+}
+
+.blue {
+  color: #02A8F4;
+}
+
+.orange {
+  color: #FF5521;
+}
+
+.brown {
+  color: #795549;
 }
 
 /* ==================================================
@@ -455,39 +482,36 @@ p {
 /* ==================================================
     Sections
 ================================================== */
+.myl-section {
+  padding: 70px 0;
+}
+
 .myl-section h2{
   padding: 1em 0;
   text-align: center;
   font-weight: bold;
 }
 
-
-#services h2, #about-us h2, #testimonials h2, #values h2, #contact h2 {
-  text-align: center;
-  margin: 80px 0 50px 0;
-}
-
-
 /* ==================================================
    Services
 ================================================== */
-#services article {
+#services .service {
   min-height: 250px;
   margin-bottom: 50px;
 }
 
-#services article img {
+#services .service img {
   height: 150px;
   margin: 0 auto;
 }
 
-#services article h3 {
+#services .service h3 {
+  margin-top: 25px;
   text-align: center;
-  font-weight: bold;
   min-height: 50px;
 }
 
-#services article p {
+#services .service p {
   text-align: center;
   margin-top: 25px;
   padding: 0 10px 0 10px;
@@ -496,6 +520,23 @@ p {
 /* ==================================================
    About us
 ================================================== */
+#about-us .row {
+  display: table;
+}
+
+#about-us .au-slogan, #about-us .au-description {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+#about-us .au-slogan h3 {
+  font-style: oblique;
+}
+
+#about-us .au-description p{
+  line-height: 2;
+  text-align: justify;
+}
 
 /* ==================================================
    testimonials
@@ -505,7 +546,7 @@ p {
 }
 
 #testimonials .ns_slideContent {
-  padding: 50px;
+  padding: 50px 70px 30px;
 }
 
 #testimonials article .testimonial-text{
@@ -530,55 +571,84 @@ p {
    values
 ================================================== */
 
-#values article {
+#values .value {
   min-height: 200px;
   margin-bottom: 50px;
 }
 
-#values article img {
-  height: 75px;
+#values .value .value-title{
+  min-height: 60px;
 }
 
-#values article h3 {
+#values .value .value-title h3 {
   text-align: center;
 }
 
-.green {
-  color: #019587;
+#values .value .value-content {
+  margin-top: 20px;
 }
 
-.blue {
-  color: #02A8F4;
+#values .value .value-content ul li {
+  margin-bottom: 10px;
 }
 
-.orange {
-  color: #FF5521;
-}
-
-.brown {
-  color: #795549;
-}
-
-#values article ul li span {
+#values .value .value-content span {
+  font-size: 16px;
   margin-left: 8px;
 }
 
 /* ==================================================
    Contact
 ================================================== */
+#contact {
+  background-color: #4BAF4F;
+  color: #fff;
+}
+
 #lym-contact .form-col{
   padding: 0 30px;
 }
 
-#contact .contact-form, #contact .contact-footer {
+#contact .contact-info, #contact .contact-form {
   padding: 50px 0;
+}
+
+#contact .contact-form {
+  padding-bottom: 0;
+}
+
+#contact .contact-form button {
+  border-color: #fff;
+  border-width: 2px;
+}
+
+.contact-info .contact-icon {
+  display: block;
+  margin-bottom: 30px;
 }
 
 #contact .contact-form textarea{
   height: 132px;
 }
 
-.contact-footer .contact-icon {
-  display: block;
-  margin-bottom: 30px;
+/* ==================================================
+   Footer
+================================================== */
+.lym-footer {
+  background-color: #474747;
+  padding: 14px 30px;
+}
+
+.lym-footer span a {
+  color: #706F6F;
+  font-weight: bold;
+}
+
+.lym-footer span a:hover, .lym-footer span a:focus {
+  color: #fff;
+}
+
+.lym-footer .social-icons i {
+  margin: 10px 5px;
+  color: #706F6F;
 }
