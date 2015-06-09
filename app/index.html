@@ -12,6 +12,7 @@
   <!-- bower:css -->
   <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="lib/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css" />
   <!-- endbower -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/css/main.css">
@@ -235,8 +236,57 @@
   <section id="contact" class="myl-section">
     <div class="container">
       <h2>Contacto</h2>
+      <div class="row contact-footer">
+        <div class="col-md-4 text-center">
+          <i class="fa fa-map-marker fa-5x contact-icon"></i>
+          <span>
+            1234 Fictional Road Suite #789 <br>
+            Nashville TN 00000
+          </span>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fa fa-phone fa-5x contact-icon"></i>
+          <span>
+            RPC: 979-777-897 <br>
+            RPM: 999-105-151
+          </span>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fa fa-envelope fa-5x contact-icon"></i>
+          <span>
+            solucionesymas@gmail.com
+          </span>
+        </div>
+      </div>
+      <div class="row contact-form">
+        <form id="lym-contact" class="form-horizontal col-md-10 col-md-offset-1">
+          <div class="col-md-5 form-col">
+            <div class="form-group">
+              <input id="contact_name" type="text" class="form-control" placeholder="Nombre" name="name">
+            </div>
+            <div class="form-group">
+              <input id="contact_email" type="mail" class="form-control" placeholder="Correo" name="email">
+            </div>
+            <div class="form-group">
+              <input id="phone" type="text" class="form-control" placeholder="Celular" name="phone">
+            </div>
+          </div>
+          <div class="col-md-7 form-col">
+            <div class="form-group">
+              <textarea id="message" name="message" class="form-control" rows="4" placeholder="Consulta"></textarea>
+              <p id="contact-response"></p>
+            </div>
+            <div class="form-group">
+              <button id="contact-submit2" class="btn btn-bio btn-orange col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">ENVIAR</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
+  <footer>
+
+  </footer>
   <!-- bower:js -->
   <script src="lib/jquery/dist/jquery.js"></script>
   <script src="lib/bootstrap/dist/js/bootstrap.js"></script>

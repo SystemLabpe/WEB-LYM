@@ -202,7 +202,7 @@ a, a:hover, a:focus {
   .lym-nav {
     z-index: 1;
     height: 90px;
-    background-color: rgba(247, 145, 0, 0.9);
+    background-color: rgba(247, 145, 0, 1);
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     transition: height 0.3s;
@@ -418,7 +418,7 @@ a, a:hover, a:focus {
   padding: 4em 0;
 }
 
-#services, #about-us, #testimonials, #values, #contact {
+#contact {
   height: 700px;
 }
 
@@ -498,4 +498,20 @@ a, a:hover, a:focus {
 
 #values article ul {
   list-style: disc;
+}
+
+/* ==================================================
+   Contact
+================================================== */
+#lym-contact .form-col{
+  padding: 0 30px;
+}
+
+#contact .contact-form, #contact .contact-footer {
+  padding: 50px 0;
+}
+
+.contact-footer .contact-icon {
+  display: block;
+  margin-bottom: 30px;
 }
