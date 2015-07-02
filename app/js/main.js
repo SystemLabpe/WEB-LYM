@@ -83,4 +83,8 @@ jQuery(document).ready(function($){
     slideTransitionEasing: "easeInOutExpo"
   });
 
+  $(".home-slider").nerveSlider({
+    sliderFullscreen: true
+  });
+
 });
