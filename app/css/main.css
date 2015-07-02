@@ -87,6 +87,10 @@ p {
   color: #019587;
 }
 
+.light-green {
+  color: #2DCC11;
+}
+
 .blue {
   color: #02A8F4;
 }
@@ -579,6 +583,7 @@ p {
 }
 
 #about-us .au-description p{
+  font-size: 20px;
   line-height: 2;
   text-align: justify;
 }

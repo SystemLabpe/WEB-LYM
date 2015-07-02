@@ -65,7 +65,7 @@ jQuery(document).ready(function($){
   });
 
   $('#logo-home').on('click',function(){
-    var target = $('#contact');
+    var target = $('#services');
     $('body,html').animate({
       'scrollTop': target.offset().top - secondaryNav.height() + 1
     },400);
@@ -83,8 +83,31 @@ jQuery(document).ready(function($){
     slideTransitionEasing: "easeInOutExpo"
   });
 
+
   $(".home-slider").nerveSlider({
     sliderFullscreen: true
+  });
+
+  $("#contact-submit").on('click',function() {
+    var $contact_form = $('#lym-contact');
+    var fields = $contact_form.serialize();
+
+    $.ajax({
+      type: "POST",
+      url: "php/contact.php",
+      data: fields,
+      dataType: 'json',
+      success: function(response) {
+
+        if(response.status){
+          $('#contact-form input').val('');
+          $('#contact-form textarea').val('');
+        }
+
+        $('#contact-response').empty().html(response.html);
+      }
+    });
+    return false;
   });
 
 });
